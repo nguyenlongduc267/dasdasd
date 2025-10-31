@@ -13,13 +13,19 @@
       font-family: 'Poppins', sans-serif;
     }
     body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg');
+  background-size: cover; /* Cho ảnh vừa màn hình */
+  background-position: center; /* Canh giữa ảnh */
+  background-attachment: fixed; /* Làm ảnh không trượt khi cuộn */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
     }
     .card {
       background: rgba(255,255,255,0.1);
