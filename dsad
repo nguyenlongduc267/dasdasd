@@ -5,108 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KZONEE | Nguyễn Long Đức</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
-    body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg');
-  background-size: cover; /* Cho ảnh vừa màn hình */
-  background-position: center; /* Canh giữa ảnh */
-  background-attachment: fixed; /* Làm ảnh không trượt khi cuộn */
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-    }
-    .card {
-      background: rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 40px;
+    body {
+      height: 100vh;
+      background: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       backdrop-filter: blur(10px);
-      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
       width: 320px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.2);
+      animation: fadeIn 1.5s ease;
     }
-    .avatar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.4);
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-      transition: 0.3s;
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
-    .avatar img:hover {
-      transform: scale(1.05);
-    }
+
     h1 {
-      font-size: 24px;
-      margin-top: 15px;
-      font-weight: 700;
-    }
-    .nickname {
-      font-size: 16px;
-      color: #d0bfff;
+      font-size: 1.8em;
       margin-bottom: 5px;
     }
-    .pronouns {
-      font-size: 13px;
-      color: #ffd6ff;
-      font-style: italic;
+
+    h2 {
+      font-size: 1.1em;
+      color: #b8c6ff;
       margin-bottom: 10px;
     }
-    .desc {
-      font-size: 14px;
+
+    p {
+      font-size: 0.95em;
+      margin: 5px 0 20px;
       opacity: 0.9;
-      margin: 10px 0 20px;
     }
-    .links a {
+
+    .btn {
       display: block;
-      text-decoration: none;
-      color: white;
       background: rgba(255,255,255,0.15);
-      margin: 8px auto;
-      padding: 10px 15px;
-      border-radius: 10px;
-      width: 85%;
-      transition: 0.3s;
       border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
     }
-    .links a:hover {
+
+    .btn:hover {
       background: rgba(255,255,255,0.3);
-      transform: translateY(-2px);
+      transform: scale(1.05);
     }
+
     footer {
-      font-size: 12px;
-      color: #d0bfff;
-      opacity: 0.8;
-      margin-top: 25px;
+      margin-top: 15px;
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
+
+    footer span {
+      color: #ff6b81;
     }
   </style>
 </head>
 <body>
+
+  <!-- Nhạc tự phát -->
+  <audio autoplay loop hidden>
+    <source src="https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/music.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="card">
-    <div class="avatar">
-      <img src="https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg" alt="KZONEE Avatar">
-    </div>
     <h1>Nguyễn Long Đức</h1>
-    <div class="nickname">@KZONEE</div>
-    <div class="pronouns">💬 Cố gắng mốt cưới chị Như về</div>
-    <p class="desc">Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
+    <h2>@KZONEE</h2>
+    <p>💬 Cố gắng mốt cưới chị Như về</p>
+    <p>Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
 
-    <div class="links">
-      <a href="https://zenitcraft.net" target="_blank">🌐 Minecraft Server – ZenitCraft.net</a>
-      <a href="#" target="_blank">💬 Discord: Đức-kzonee@123</a>
-    </div>
+    <a href="#" class="btn">🌐 Minecraft Server – ZenitCraft.net</a>
+    <a href="#" class="btn">💬 Discord: Đức-kzonee@123</a>
 
-    <footer>© 2025 KZONEE — Made with ❤️</footer>
+    <footer>© 2025 KZONEE — Made with <span>❤️</span></footer>
   </div>
 </body>
 </html>
