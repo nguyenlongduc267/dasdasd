@@ -16,7 +16,7 @@
 
     body {
       height: 100vh;
-      background: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/kazuha.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -24,7 +24,20 @@
       backdrop-filter: blur(10px);
     }
 
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+
     .card {
+      position: relative;
+      z-index: 1;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 25px;
       padding: 40px;
@@ -88,6 +101,8 @@
   </style>
 </head>
 <body>
+
+  <div class="overlay"></div>
 
   <!-- Nhạc tự phát -->
   <audio autoplay loop hidden>
