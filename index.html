@@ -21,7 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      backdrop-filter: blur(10px);
+      color: #fff;
     }
 
     .overlay {
@@ -30,7 +30,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(8px);
       z-index: 0;
     }
@@ -55,6 +55,23 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      margin-bottom: 15px;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
+
+    .avatar:hover {
+      transform: scale(1.1);
+      border-color: #ff6b81;
+      box-shadow: 0 0 25px #ff6b81;
+    }
+
     h1 {
       font-size: 1.8em;
       margin-bottom: 5px;
@@ -68,7 +85,7 @@
 
     p {
       font-size: 0.95em;
-      margin: 5px 0 20px;
+      margin: 5px 0 15px;
       opacity: 0.9;
     }
 
@@ -110,15 +127,17 @@
   </audio>
 
   <div class="card">
+    <img src="https://raw.githubusercontent.com/nguyenlongduc267/duc/main/bbb.jpeg" class="avatar">
     <h1>Nguyễn Long Đức</h1>
     <h2>@KZONEE</h2>
     <p>💬 Cố gắng mốt cưới chị Như về</p>
-    <p>Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
+    <p>🎓 Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
 
-    <a href="#" class="btn">🌐 Minecraft Server – ZenitCraft.net</a>
+    <a href="#" class="btn">🌐 Minecraft Server — ZenitCraft.net</a>
     <a href="#" class="btn">💬 Discord: Đức-kzonee@123</a>
 
     <footer>© 2025 KZONEE — Made with <span>❤️</span></footer>
   </div>
+
 </body>
 </html>
