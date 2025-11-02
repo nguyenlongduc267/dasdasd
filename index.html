@@ -3,37 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website của Đức</title>
+  <title>Trước khi em tồn tại 💙</title>
   <style>
-    body {
-      background-image: url("https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/g.jpg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      height: 100vh;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .content {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 20px;
-      padding: 30px;
-      margin-top: 20%;
-      display: inline-block;
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: url("https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/g.jpg") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Hiệu ứng mờ nền */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Dòng chữ giữa màn hình */
+    h1 {
+      position: relative;
+      color: #fff;
+      font-size: 2rem;
+      text-shadow: 0 0 20px #80d4ff;
+      z-index: 1;
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #80d4ff, 0 0 20px #80d4ff; }
+      50% { text-shadow: 0 0 25px #1ec0ff, 0 0 40px #1ec0ff; }
+    }
+
+    /* Nút bật/tắt nhạc */
+    #musicBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 65px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 2;
+      font-size: 24px;
+    }
+
+    #musicBtn:hover {
+      background: rgba(255,255,255,0.4);
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>Xin chào, đây là web của Đức </h1>
-    <p>Nhạc nền: Trước Khi Em Tồn Tại (Speed Up)</p>
-  </div>
+  <h1>💙 Trước khi em tồn tại 💙</h1>
 
-  <!-- Nhạc nền auto phát -->
-  <audio autoplay loop controls>
+  <audio id="bgMusic" loop>
     <source src="https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/TruocKhiEmTonTai.mp3" type="audio/mpeg">
   </audio>
+
+  <div id="musicBtn">🎧</div>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicBtn');
+    let playing = false;
+
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🔇';
+      } else {
+        music.play();
+        btn.textContent = '🎧';
+      }
+      playing = !playing;
+    });
+  </script>
 </body>
 </html>
