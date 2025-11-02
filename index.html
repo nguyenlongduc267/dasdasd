@@ -3,99 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trước khi em tồn tại 💙</title>
+  <title>KZONEE | Nguyễn Long Đức</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
       height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      background: url("https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/g.jpg") no-repeat center center/cover;
+      background: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-family: "Poppins", sans-serif;
-    }
-
-    /* Hiệu ứng mờ nền */
-    body::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(6px);
-    }
-
-    /* Dòng chữ giữa màn hình */
-    h1 {
-      position: relative;
+      align-items: center;
       color: #fff;
-      font-size: 2rem;
-      text-shadow: 0 0 20px #80d4ff;
-      z-index: 1;
-      animation: glow 2s infinite ease-in-out;
     }
 
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 10px #80d4ff, 0 0 20px #80d4ff; }
-      50% { text-shadow: 0 0 25px #1ec0ff, 0 0 40px #1ec0ff; }
-    }
-
-    /* Nút bật/tắt nhạc */
-    #musicBtn {
+    .overlay {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: rgba(255,255,255,0.2);
-      border: 2px solid #fff;
-      border-radius: 50%;
-      width: 65px;
-      height: 65px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(6px);
-      cursor: pointer;
-      transition: 0.3s;
-      z-index: 2;
-      font-size: 24px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      z-index: 0;
     }
 
-    #musicBtn:hover {
-      background: rgba(255,255,255,0.4);
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      width: 320px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      margin-bottom: 15px;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
+
+    .avatar:hover {
       transform: scale(1.1);
+      border-color: #ff6b81;
+      box-shadow: 0 0 25px #ff6b81;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.1em;
+      color: #b8c6ff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95em;
+      margin: 5px 0 15px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 15px;
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
+
+    footer span {
+      color: #ff6b81;
     }
   </style>
 </head>
 <body>
-  <h1>💙 Trước khi em tồn tại 💙</h1>
 
-  <audio id="bgMusic" loop>
-    <source src="https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/TruocKhiEmTonTai.mp3" type="audio/mpeg">
+  <div class="overlay"></div>
+
+  <!-- Nhạc tự phát -->
+  <audio autoplay loop hidden>
+    <source src="https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/music.mp3" type="audio/mpeg">
   </audio>
 
-  <div id="musicBtn">🎧</div>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/nguyenlongduc267/duc/main/bbb.jpeg" class="avatar">
+    <h1>Nguyễn Long Đức</h1>
+    <h2>@KZONEE</h2>
+    <p>💬 Cố gắng mốt cưới chị Như về</p>
+    <p>🎓 Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
 
-  <script>
-    const music = document.getElementById('bgMusic');
-    const btn = document.getElementById('musicBtn');
-    let playing = false;
+    <a href="#" class="btn">🌐 Minecraft Server — ZenitCraft.net</a>
+    <a href="#" class="btn">💬 Discord: Đức - kzonee@123</a>
 
-    btn.addEventListener('click', () => {
-      if (playing) {
-        music.pause();
-        btn.textContent = '🔇';
-      } else {
-        music.play();
-        btn.textContent = '🎧';
-      }
-      playing = !playing;
-    });
-  </script>
+    <footer>© 2025 KZONEE — Made with <span>❤️</span></footer>
+  </div>
+
 </body>
 </html>
