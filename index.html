@@ -3,63 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kazuha | Chill Zone</title>
+  <title>Website của Đức</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      height: 100vh;
-      width: 100vw;
-      background: url("https://raw.githubusercontent.com/nguyenlongduc267/duc/main/g.jpg") no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      font-family: "Poppins", sans-serif;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
-
-    .text {
-      position: relative;
-      z-index: 2;
-      color: #fff;
+      background-image: url("https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/g.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      font-size: 2.4rem;
-      font-weight: 600;
-      animation: fadeInOut 4s ease-in-out infinite;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      height: 100vh;
+      margin: 0;
     }
-
-    @keyframes fadeInOut {
-      0% { opacity: 0.2; transform: translateY(10px); }
-      50% { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0.2; transform: translateY(-10px); }
-    }
-
-    audio {
-      display: none;
+    .content {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 20%;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="text">"Trước khi em tồn tại..." 🌙</div>
+  <div class="content">
+    <h1>Xin chào, đây là web của Đức </h1>
+    <p>Nhạc nền: Trước Khi Em Tồn Tại (Speed Up)</p>
+  </div>
 
+  <!-- Nhạc nền auto phát -->
   <audio autoplay loop>
-    <source src="https://drive.usercontent.google.com/download?id=1tJP8rpJQrweoa2n2gZ6xbme0KqEnEidL&export=open&authuser=0" type="audio/mpeg">
+    <source src="https://cdn.jsdelivr.net/gh/nguyenlongduc267/duc/TruocKhiEmTonTai.mp3" type="audio/mpeg">
   </audio>
 </body>
 </html>
