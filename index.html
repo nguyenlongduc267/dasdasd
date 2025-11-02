@@ -3,25 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KZONEE | Nguyễn Long Đức</title>
+  <title>Kazuha Theme</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      height: 100vh;
-      background: url('https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg') no-repeat center center fixed;
+      background-image: url("https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/g.jpg");
       background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .overlay {
@@ -30,114 +27,44 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      z-index: 0;
-    }
-
-    .card {
-      position: relative;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(5px);
       z-index: 1;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 25px;
-      padding: 40px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
       text-align: center;
-      color: #fff;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-      width: 320px;
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255,255,255,0.2);
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255, 255, 255, 0.8);
-      margin-bottom: 15px;
-      transition: 0.4s;
-      box-shadow: 0 0 15px rgba(255,255,255,0.4);
-    }
-
-    .avatar:hover {
-      transform: scale(1.1);
-      border-color: #ff6b81;
-      box-shadow: 0 0 25px #ff6b81;
+      color: white;
+      top: 40%;
+      transform: translateY(-50%);
     }
 
     h1 {
-      font-size: 1.8em;
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      font-size: 1.1em;
-      color: #b8c6ff;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 0.95em;
-      margin: 5px 0 15px;
-      opacity: 0.9;
+      font-size: 1.2rem;
     }
 
-    .btn {
-      display: block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: white;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: rgba(255,255,255,0.3);
-      transform: scale(1.05);
-    }
-
-    footer {
-      margin-top: 15px;
-      font-size: 0.8em;
-      opacity: 0.7;
-    }
-
-    footer span {
-      color: #ff6b81;
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-
   <div class="overlay"></div>
 
-  <!-- Nhạc tự phát -->
-  <audio autoplay loop hidden>
-    <source src="https://raw.githubusercontent.com/nguyenlongduc267/dasdasd/main/music.mp3" type="audio/mpeg">
-  </audio>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/nguyenlongduc267/duc/main/bbb.jpeg" class="avatar">
-    <h1>Nguyễn Long Đức</h1>
-    <h2>@KZONEE</h2>
-    <p>💬 Cố gắng mốt cưới chị Như về</p>
-    <p>🎓 Học sinh lớp 8, thích Minecraft và sáng tạo nội dung.</p>
-
-    <a href="#" class="btn">🌐 Minecraft Server — ZenitCraft.net</a>
-    <a href="#" class="btn">💬 Discord: Đức-kzonee@123</a>
-
-    <footer>© 2025 KZONEE — Made with <span>❤️</span></footer>
+  <div class="content">
+    <h1>Kazuha ✨</h1>
+    <p>Chill cùng “Trước khi em tồn tại - Speed up”</p>
   </div>
 
+  <audio autoplay loop>
+    <source src="https://raw.githubusercontent.com/nguyenlongduc267/duc/main/Tru%CC%9Bo%CC%9B%CC%81c%20khi%20em%20to%CC%82%CC%80n%20ta%CC%A3i%20-%20Speed%20up.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
